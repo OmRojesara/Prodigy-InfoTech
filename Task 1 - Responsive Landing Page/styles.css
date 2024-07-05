@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f0f0; /* Light Gray */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar Styles */
+nav {
+    position: fixed;
+    width: 100%;
+    background: #4A90E2;
+    /*Blue*/color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav ul li {
+    margin: 0 20px;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    transition: color 0.3s, background 0.3s;
+    border-radius: 55%;
+    -webkit-border-radius: 55%;
+    -moz-border-radius: 55%;
+    -ms-border-radius: 55%;
+    -o-border-radius: 55%;
+}
+
+nav ul li a:hover {
+    color: #000085; /* Red */
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    background: #4A90E2; /* Blue */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px; /* Spacing between logo and heading */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+header .btn {
+    text-decoration: none;
+    color: #fff;
+    background: #000085; /* Red */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header .btn:hover {
+    background: #fff;
+    color: #000085; /* Red */
+}
+
+/* Section Styles */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    margin-top: 60px;
+    background: #fff; /* White */
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4A90E2; /* Blue */
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background: #4A90E2; /* Blue */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Additional Styles */
+.scrolled {
+    background: #000085; /* Red */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
