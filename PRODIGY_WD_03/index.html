@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-12345" crossorigin="anonymous" />
+</head>
+<body>
+    <div id="datetime-container"></div>
+    <div class="container">
+        <header>
+            <h1 class="app-title">Weather App</h1>
+        </header>
+        <main>
+            <div class="weather-card" id="weather-card">
+                <input type="text" id="location-input" placeholder="Enter city name...">
+                <button onclick="fetchWeather()">Get Weather</button>
+                <p>Or</p>
+                <button onclick="fetchCurrentLocation()">Get Current Location</button>
+                <div id="weather-info">
+                    <div id="location"></div>
+                    <div id="temperature"></div>
+                    <div id="conditions"></div>
+                    <div id="weather-icon"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Om Rojesara. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const day = now.toLocaleDateString('en-US', { weekday: 'long' });
+            const date = now.toLocaleDateString('en-US', { day: '2-digit', month: 'long', year: 'numeric' });
+            const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+            const datetimeContainer = document.getElementById('datetime-container');
+            datetimeContainer.innerHTML = `<i class="far fa-calendar-alt"></i> ${day}, ${date} <i class="far fa-clock"></i> ${time}`;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); 
+    </script>
+</body>
+</html>
